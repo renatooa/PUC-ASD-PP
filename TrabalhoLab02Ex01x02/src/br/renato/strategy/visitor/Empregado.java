@@ -7,9 +7,17 @@ public class Empregado implements ContribuinteVisitado {
 	double salarioLiquido = 0;
 	double impostoIr = 0;
 
+	public Empregado() {
+	}
+
+	public Empregado(double salario) {
+		super();
+		this.salario = salario;
+	}
+
 	@Override
-	public void aceita(AliquocataVisitador aliVisitador) {
-		
+	public void aceita(AuditorVisitador aliVisitador) {
+
 		aliVisitador.visit(this);
 
 	}
@@ -36,5 +44,11 @@ public class Empregado implements ContribuinteVisitado {
 
 	public void setImpostoIr(double impostoIr) {
 		this.impostoIr = impostoIr;
+	}
+
+	@Override
+	public String toString() {
+		return "Empregado [salario=" + salario + ", salarioLiquido="
+				+ salarioLiquido + ", impostoIr=" + impostoIr + "]";
 	}
 }

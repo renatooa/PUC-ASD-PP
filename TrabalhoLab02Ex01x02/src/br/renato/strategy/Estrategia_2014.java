@@ -6,30 +6,29 @@ import java.util.List;
 import br.renato.strategy.base.EstrategiaBase;
 import br.renato.strategy.contrato.EstrategiaCalculoImpostoRenda;
 
-public class Estrategia_2015 implements EstrategiaCalculoImpostoRenda {
+public class Estrategia_2014 implements EstrategiaCalculoImpostoRenda {
 
 	List<EstrategiaCalculoImpostoRenda> estrategiasBase = null;
 
-	public Estrategia_2015() {
+	public Estrategia_2014() {
 
 		estrategiasBase = new ArrayList<EstrategiaCalculoImpostoRenda>();
 
-		estrategiasBase.add(new EstrategiaBase(1903.98, 1903.98, 0));
-		estrategiasBase.add(new EstrategiaBase(1903.99, 2826.65, 7.5));
-		estrategiasBase.add(new EstrategiaBase(2826.66, 3751.05, 15));
-		estrategiasBase.add(new EstrategiaBase(3751.06, 4664.68, 22.5));
-		estrategiasBase.add(new EstrategiaBase(4664.68, 4664.68, 27.5));
+		estrategiasBase.add(new EstrategiaBase(1787.77, 1787.77, 0));
+		estrategiasBase.add(new EstrategiaBase(1787.78, 2679.29, 7.5));
+		estrategiasBase.add(new EstrategiaBase(2679.30, 3572.43, 15));
+		estrategiasBase.add(new EstrategiaBase(3572.44, 4463.81, 22.5));
+		estrategiasBase.add(new EstrategiaBase(4463.81, 4463.81, 27.5));
 
 	}
 
 	@Override
 	public double calcular(double salario) {
-		
+
 		double ir = 0;
-		
+
 		for (EstrategiaCalculoImpostoRenda estrategiaCalculoImpostoRenda : estrategiasBase) {
-			double valorFaixa = estrategiaCalculoImpostoRenda.calcular(salario);
-			ir += valorFaixa;
+			ir += estrategiaCalculoImpostoRenda.calcular(salario);
 		}
 
 		return ir;

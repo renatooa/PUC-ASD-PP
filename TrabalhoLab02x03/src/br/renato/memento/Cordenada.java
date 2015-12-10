@@ -4,7 +4,7 @@ public class Cordenada {
 
 	private int x = 0;
 	private int y = 0;
-
+	
 	public Cordenada() {
 	}
 

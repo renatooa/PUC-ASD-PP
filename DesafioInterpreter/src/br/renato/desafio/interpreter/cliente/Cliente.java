@@ -6,9 +6,10 @@ public class Cliente {
 	
 	public static void main(String[] args) {
 		
-		AvaliadorExpression avaliadorExpression = new AvaliadorExpression();
 		
-		System.err.println(avaliadorExpression.interpretar("Dm6°"));
+		System.err.println(AvaliadorExpression.interpretar("D6/9°m"));
+		
+		
 	}
 
 }

@@ -1,4 +1,4 @@
-package br.renato.strategy;
+package br.renato.strategy.contrato;
 
 public interface EstrategiaCalculoImpostoRenda {
 

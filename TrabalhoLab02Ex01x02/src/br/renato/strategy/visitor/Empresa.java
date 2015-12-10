@@ -11,7 +11,7 @@ public class Empresa implements ContribuinteVisitado {
 	public Empresa() {
 	}
 
-	public void aceita(AliquocataVisitador aliVisitador) {
+	public void aceita(AuditorVisitador aliVisitador) {
 
 		for (ContribuinteVisitado contribuinteVisitado : contribuinteVisitados) {
 			contribuinteVisitado.aceita(aliVisitador);
@@ -38,4 +38,8 @@ public class Empresa implements ContribuinteVisitado {
 		this.valortotalIr = valortotalIr;
 	}
 
+	@Override
+	public String toString() {
+		return "Empresa [valortotalIr=" + valortotalIr + "]";
+	}
 }
