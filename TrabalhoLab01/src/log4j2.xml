@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+	<Properties>
+		<Property name="log-path">logs</Property>
+		<Property name="prefixoFile">lab01-operando-</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="console-log" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+		</Console>
+
+		<Console name="console-err" target="SYSTEM_ERR">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+		</Console>
+
+		<RollingFile name="trace-log" fileName="${log-path}/${prefixoFile}trace.log"
+			filePattern="${log-path}/mycuteblog-trace-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="100MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="3"
+				compressionLevel="6" />
+		</RollingFile>
+
+		<RollingFile name="error-log" fileName="${log-path}/${prefixoFile}error.log"
+			filePattern="${log-path}/$${date:yyyy-MM-dd}/mycuteblog-error-%d{yyyy-MM-dd}-%i.zip">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} -
+					%msg%n%ex</pattern>
+			</PatternLayout>
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="100MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="3"
+				compressionLevel="6" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+
+		<Logger name="br" level="debug" additivity="false">
+			<appender-ref ref="trace-log" level="debug" />
+			<appender-ref ref="error-log" level="error" />
+			<appender-ref ref="console-log" level="debug" />
+			<appender-ref ref="console-err" level="error" />
+		</Logger>
+
+		<Root level="debug" additivity="false">
+			<appender-ref ref="console-err" level="error" />
+		</Root>
+	</Loggers>
+</Configuration>
