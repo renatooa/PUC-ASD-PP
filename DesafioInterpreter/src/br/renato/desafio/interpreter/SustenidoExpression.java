@@ -6,7 +6,11 @@ public class SustenidoExpression implements Expression {
 
 	@Override
 	public String interpretar(String expressao) {
-		// TODO Auto-generated method stub
+
+		if (expressao.contains("#")) {
+			return "Sustenido";
+		}
+
 		return "";
 	}
 

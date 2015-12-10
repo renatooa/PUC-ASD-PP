@@ -8,7 +8,7 @@ public class Cliente {
 		
 		AvaliadorExpression avaliadorExpression = new AvaliadorExpression();
 		
-		System.err.println(avaliadorExpression.interpretar("Db"));
+		System.err.println(avaliadorExpression.interpretar("Dm6°"));
 	}
 
 }

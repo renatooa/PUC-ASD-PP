@@ -6,6 +6,11 @@ public class AcordeMenorExpression implements Expression {
 
 	@Override
 	public String interpretar(String expressao) {
+
+		if (expressao.contains("m")) {
+			return "menor";
+		}
+
 		return "";
 	}
 }

@@ -7,10 +7,6 @@ public class NotaExpression implements Expression {
 	@Override
 	public String interpretar(String expressao) {
 
-		/*
-		 * A – La B – Si C – Dó D – Ré E – Mi F – Fa G – Sol
-		 */
-
 		if (expressao.contains("A")) {
 			return "La";
 		} else if (expressao.contains("B")) {
@@ -22,7 +18,7 @@ public class NotaExpression implements Expression {
 		} else if (expressao.contains("E")) {
 			return "Mi";
 		} else if (expressao.contains("F")) {
-			return "Fa";
+			return "Fá";
 		} else if (expressao.contains("G")) {
 			return "Sol";
 		}

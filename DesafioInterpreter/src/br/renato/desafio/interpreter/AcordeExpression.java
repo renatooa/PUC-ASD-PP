@@ -13,12 +13,12 @@ public class AcordeExpression implements Expression {
 		expressions = new ArrayList<Expression>();
 
 		expressions.add(new NotaExpression());
-		expressions.add(new BemolExpression());
 		expressions.add(new SustenidoExpression());
-		expressions.add(new DiminutoExpression());
-		expressions.add(new NumerosExpression());
+		expressions.add(new BemolExpression());
 		expressions.add(new AcordeMaiorExpression());
 		expressions.add(new AcordeMenorExpression());
+		expressions.add(new NumerosExpression());
+		expressions.add(new DiminutoExpression());
 
 	}
 
