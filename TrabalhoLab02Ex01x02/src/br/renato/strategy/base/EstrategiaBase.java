@@ -30,7 +30,7 @@ public class EstrategiaBase implements EstrategiaCalculoImpostoRenda {
 
 		if (salario > salarioFinal && salarioFinal != salarioInicial) {
 
-			valorCalculoFaixa = getSalarioDelta();
+			valorCalculoFaixa = getDeltaFaixa();
 
 		} else {
 			valorCalculoFaixa = salario - salarioInicial;
@@ -39,7 +39,7 @@ public class EstrategiaBase implements EstrategiaCalculoImpostoRenda {
 		return valorCalculoFaixa * (aliquota / 100);
 	}
 
-	private double getSalarioDelta() {
+	private double getDeltaFaixa() {
 		return salarioFinal - salarioInicial;
 	}
 
