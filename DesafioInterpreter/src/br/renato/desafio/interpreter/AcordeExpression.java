@@ -24,7 +24,7 @@ public class AcordeExpression implements Expression {
 
 	@Override
 	public String interpretar(String expressao) {
-
+		
 		StringBuilder stringBuilder = new StringBuilder();
 
 		for (Expression expression : expressions) {
@@ -32,10 +32,10 @@ public class AcordeExpression implements Expression {
 			String result = expression.interpretar(expressao);
 
 			if (result != null && !result.isEmpty()) {
-				
+
 				stringBuilder.append(result);
 				stringBuilder.append(" ");
-				
+
 			}
 		}
 

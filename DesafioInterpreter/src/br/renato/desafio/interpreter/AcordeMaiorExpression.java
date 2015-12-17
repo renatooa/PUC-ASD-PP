@@ -6,7 +6,7 @@ public class AcordeMaiorExpression implements Expression {
 
 	@Override
 	public String interpretar(String expressao) {
-
+		
 		if (expressao.contains("+")) {
 			return "maior";
 		}
