@@ -18,6 +18,6 @@ public class AutorizadorChequeStub implements PagamentoAutorizavel {
 	public boolean verificarPagamento() {
 		// Utiliza o PagamentoAutorizavel Skeleton para verificar externamento o
 		// a autorização para o cheque
-		return carteiraIdentidade != null;
+		return carteiraIdentidade != null && aPagar > 0;
 	}
 }
