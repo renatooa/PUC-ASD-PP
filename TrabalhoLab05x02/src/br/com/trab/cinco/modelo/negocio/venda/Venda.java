@@ -1,4 +1,4 @@
-package br.com.trab.cinco.modelo.venda;
+package br.com.trab.cinco.modelo.negocio.venda;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,11 +6,12 @@ import java.util.Date;
 import java.util.DoubleSummaryStatistics;
 import java.util.stream.Collectors;
 
-import br.com.trab.cinco.modelo.Filial;
-import br.com.trab.cinco.modelo.Produto;
-import br.com.trab.cinco.modelo.usuario.Operador;
-import br.com.trab.cinco.modelo.venda.pagamento.PagamentoAutorizavel;
-import br.com.trab.cinco.modelo.venda.pagamento.PagamentoStrategy;
+import br.com.trab.cinco.modelo.dados.VendaMapper;
+import br.com.trab.cinco.modelo.negocio.Filial;
+import br.com.trab.cinco.modelo.negocio.Produto;
+import br.com.trab.cinco.modelo.negocio.usuario.Operador;
+import br.com.trab.cinco.modelo.negocio.venda.pagamento.PagamentoAutorizavel;
+import br.com.trab.cinco.modelo.negocio.venda.pagamento.PagamentoStrategy;
 
 public class Venda {
 
@@ -45,7 +46,7 @@ public class Venda {
 		VendaItem vendaItem = new VendaItem(produto, quantidade);
 
 		vendaItens.add(vendaItem);
-		
+
 		return vendaItem.getDescricao();
 	}
 
@@ -68,6 +69,9 @@ public class Venda {
 	public void confirmarVenda() {
 		this.dataVenda = new Date();
 		baixarEstoque();
+		
+		VendaMapper vendaMapper = new VendaMapper(this);
+		vendaMapper.inserir();
 	}
 
 	public void baixarEstoque() {

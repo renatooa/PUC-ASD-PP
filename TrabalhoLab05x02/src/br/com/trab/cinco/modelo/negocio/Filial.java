@@ -1,6 +1,6 @@
-package br.com.trab.cinco.modelo;
+package br.com.trab.cinco.modelo.negocio;
 
-import br.com.trab.cinco.modelo.estoque.LocalEstoque;
+import br.com.trab.cinco.modelo.negocio.estoque.LocalEstoque;
 
 public class Filial {
 

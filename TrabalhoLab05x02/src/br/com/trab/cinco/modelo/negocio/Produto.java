@@ -1,4 +1,4 @@
-package br.com.trab.cinco.modelo;
+package br.com.trab.cinco.modelo.negocio;
 
 public class Produto {
 

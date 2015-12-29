@@ -1,4 +1,4 @@
-package br.com.trab.cinco.modelo.usuario;
+package br.com.trab.cinco.modelo.negocio.usuario;
 
 public interface Usuario {
 	

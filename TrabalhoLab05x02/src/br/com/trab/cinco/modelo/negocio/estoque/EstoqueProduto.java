@@ -1,6 +1,6 @@
-package br.com.trab.cinco.modelo.estoque;
+package br.com.trab.cinco.modelo.negocio.estoque;
 
-import br.com.trab.cinco.modelo.Produto;
+import br.com.trab.cinco.modelo.negocio.Produto;
 
 public class EstoqueProduto {
 

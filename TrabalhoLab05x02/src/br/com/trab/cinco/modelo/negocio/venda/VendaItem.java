@@ -1,6 +1,6 @@
-package br.com.trab.cinco.modelo.venda;
+package br.com.trab.cinco.modelo.negocio.venda;
 
-import br.com.trab.cinco.modelo.Produto;
+import br.com.trab.cinco.modelo.negocio.Produto;
 
 public class VendaItem {
 

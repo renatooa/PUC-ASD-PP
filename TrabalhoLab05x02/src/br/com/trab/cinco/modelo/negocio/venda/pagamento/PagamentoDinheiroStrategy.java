@@ -1,4 +1,4 @@
-package br.com.trab.cinco.modelo.venda.pagamento;
+package br.com.trab.cinco.modelo.negocio.venda.pagamento;
 
 public class PagamentoDinheiroStrategy implements PagamentoStrategy {
 
@@ -13,7 +13,6 @@ public class PagamentoDinheiroStrategy implements PagamentoStrategy {
 	@Override
 	public double realizarPagamento(double valorVenda) {
 		troco = aPagar - valorVenda;
-
 		return aPagar;
 	}
 
@@ -21,5 +20,4 @@ public class PagamentoDinheiroStrategy implements PagamentoStrategy {
 	public double getValorTroco() {
 		return troco;
 	}
-
 }

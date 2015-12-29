@@ -1,6 +1,6 @@
-package br.com.trab.cinco.modelo.venda.pagamento;
+package br.com.trab.cinco.modelo.negocio.venda.pagamento;
 
-import br.com.trab.cinco.modelo.venda.pagamento.proxy.remoto.AutorizadorCartaoStub;
+import br.com.trab.cinco.modelo.negocio.venda.pagamento.proxy.remoto.AutorizadorCartaoStub;
 
 public class PagamentoCartaoStrategy implements PagamentoAutorizavel, PagamentoStrategy {
 

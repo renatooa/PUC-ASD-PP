@@ -1,4 +1,4 @@
-package br.com.trab.cinco.modelo.usuario;
+package br.com.trab.cinco.modelo.negocio.usuario;
 
 public class Gerente implements Usuario {
 
@@ -14,6 +14,10 @@ public class Gerente implements Usuario {
 	@Override
 	public boolean fazerLogin() {
 		return senha.equals("teste") && id.equals("root");
+	}
+	
+	public void sair(){
+		System.exit(0);
 	}
 
 	public String getNome() {

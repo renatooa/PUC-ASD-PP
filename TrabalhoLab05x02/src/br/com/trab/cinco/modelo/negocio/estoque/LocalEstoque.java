@@ -1,11 +1,11 @@
-package br.com.trab.cinco.modelo.estoque;
+package br.com.trab.cinco.modelo.negocio.estoque;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import br.com.trab.cinco.modelo.Produto;
+import br.com.trab.cinco.modelo.negocio.Produto;
 
 public class LocalEstoque {
 
