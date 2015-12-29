@@ -7,8 +7,4 @@ public interface Usuario {
 	public String getId();
 	
 	public String getSenha();
-	
-	
-	
-
 }
