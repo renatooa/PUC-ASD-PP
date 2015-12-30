@@ -5,6 +5,14 @@ import java.util.List;
 
 import br.com.trab.cinco.modelo.negocio.venda.Venda;
 
+/**
+ * Classe que representa acesso a dados da Classe {@link Venda}, para atender o
+ * requisito R010
+ * 
+ * 
+ * @author Renato
+ *
+ */
 public class VendaMapper {
 
 	private Venda venda;
@@ -14,6 +22,9 @@ public class VendaMapper {
 		this.venda = venda;
 	}
 
+	/**
+	 * Regista um venda conforme Requisito R10
+	 */
 	public void inserir() {
 
 		// persitir venda

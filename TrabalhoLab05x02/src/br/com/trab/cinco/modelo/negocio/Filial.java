@@ -2,6 +2,13 @@ package br.com.trab.cinco.modelo.negocio;
 
 import br.com.trab.cinco.modelo.negocio.estoque.LocalEstoque;
 
+/**
+ * Representação da loja na qual contem o {@link LocalEstoque local de estoque}
+ * </br> Conforme requisito R11
+ * 
+ * @author Renato
+ *
+ */
 public class Filial {
 
 	private String nome = null;
@@ -31,8 +38,14 @@ public class Filial {
 		this.localEstoque = localEstoque;
 	}
 
+	/**
+	 * Baixa o estoque pertencente a filial atravéz do {@link LocalEstoque local
+	 * de estoque}</br> Conforme o requisito R11
+	 * 
+	 * @param produto
+	 * @param quantidade
+	 */
 	public void baixarEstoque(Produto produto, double quantidade) {
-
 		localEstoque.baixarEstoque(produto, quantidade);
 	}
 

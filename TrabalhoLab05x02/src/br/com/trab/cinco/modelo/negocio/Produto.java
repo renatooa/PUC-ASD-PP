@@ -1,5 +1,11 @@
 package br.com.trab.cinco.modelo.negocio;
 
+/**
+ * Produtos unicos para todas as filiais </br> Conforme requisito R11
+ * 
+ * @author Renato
+ *
+ */
 public class Produto {
 
 	private String nome = null;

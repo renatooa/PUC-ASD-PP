@@ -1,5 +1,11 @@
 package br.com.trab.cinco.modelo.negocio.venda.pagamento;
 
+/**
+ * Estratagia para pagamento em Dinheiro conforme requisito R06
+ * 
+ * @author Renato
+ *
+ */
 public class PagamentoDinheiroStrategy implements PagamentoStrategy {
 
 	private double troco = 0;

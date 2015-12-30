@@ -3,10 +3,18 @@ package br.com.trab.cinco.modelo.negocio.venda.pagamento.proxy.remoto;
 import br.com.trab.cinco.modelo.negocio.venda.pagamento.CartaoInfoDTO;
 import br.com.trab.cinco.modelo.negocio.venda.pagamento.PagamentoAutorizavel;
 
+/**
+ * Representa a conexão com as administradoras de cartão de crédito para
+ * autorizar um pagamento</br> Conforme Requisito R07
+ * 
+ * @author Renato
+ *
+ */
 public class AutorizadorCartaoStub implements PagamentoAutorizavel {
 
 	private CartaoInfoDTO cartaoInfo = null;
 	private double aPagar = 0;
+
 	// private AutorizadorCartaoSkeleton autorizadorCartaoSkeleton
 
 	@Override

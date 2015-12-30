@@ -11,13 +11,32 @@ public class Gerente implements Usuario {
 	public Gerente() {
 	}
 
+	/**
+	 * Conforme rrequisito R01
+	 */
 	@Override
 	public boolean fazerLogin() {
 		return senha.equals("teste") && id.equals("root");
 	}
-	
-	public void sair(){
-		System.exit(0);
+
+	/**
+	 * Conforme rrequisito R01
+	 */
+	public void sair() {
+		if (fazerLogin()) {
+			System.exit(0);
+		}
+	}
+
+	/**
+	 * Conforme rrequisito R01
+	 */
+	public boolean iniciar() {
+		if (fazerLogin()) {
+			System.out.print("Entrando no sistema");
+			return true;
+		}
+		return false;
 	}
 
 	public String getNome() {

@@ -14,9 +14,14 @@ public class Operador implements Usuario {
 		this.gerente = gerente;
 	}
 
+	/**
+	 * Conforme quequisito R02
+	 */
 	@Override
 	public boolean fazerLogin() {
-		return gerente.fazerLogin() && senha.equals("teste") && id.equals("operador");
+		// Requisito R01
+		return gerente.iniciar() && senha.equals("teste")
+				&& id.equals("operador");
 	}
 
 	public String getNome() {

@@ -2,6 +2,13 @@ package br.com.trab.cinco.modelo.negocio.estoque;
 
 import br.com.trab.cinco.modelo.negocio.Produto;
 
+/**
+ * Representa o estoque de um produto. </br> Classe auxiliar para atender o
+ * requisito R11 e R09
+ * 
+ * @author Renato
+ *
+ */
 public class EstoqueProduto {
 
 	private Produto produto;

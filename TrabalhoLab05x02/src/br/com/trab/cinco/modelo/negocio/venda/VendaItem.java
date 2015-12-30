@@ -17,7 +17,7 @@ public class VendaItem {
 	}
 
 	public String getDescricao() {
-		return produto.toString() + " quant " + quantidade;
+		return produto.toString() + " quant " + quantidade + " preço " + produto.getPreco();
 	}
 	
 	public double getQuantidade() {

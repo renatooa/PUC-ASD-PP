@@ -2,17 +2,26 @@ package br.com.trab.cinco.modelo.negocio.venda.pagamento;
 
 import br.com.trab.cinco.modelo.negocio.venda.pagamento.proxy.remoto.AutorizadorCartaoStub;
 
-public class PagamentoCartaoStrategy implements PagamentoAutorizavel, PagamentoStrategy {
+/**
+ * Estrategia para pagamento com Cartão conformidade ao requisito R07
+ * 
+ * @author Renato
+ *
+ */
+public class PagamentoCartaoStrategy implements PagamentoAutorizavel,
+		PagamentoStrategy {
 
 	private double aPagar = 0;
 
+	// Consulta a serviços externos
 	private PagamentoAutorizavel pagamentoAutorizavelStub = null;
 
 	public PagamentoCartaoStrategy(double aPagar) {
 
 		this.aPagar = aPagar;
 
-		pagamentoAutorizavelStub = new AutorizadorCartaoStub(capturarDadosCartao(), aPagar);
+		pagamentoAutorizavelStub = new AutorizadorCartaoStub(
+				capturarDadosCartao(), aPagar);
 	}
 
 	private CartaoInfoDTO capturarDadosCartao() {
